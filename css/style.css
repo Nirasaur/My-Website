@@ -165,7 +165,7 @@ h2 {
   color: #2d6a4f;
 }
 
-.dropdown-menu:hover .dropdown-content {
+.dropdown-menu.active .dropdown-content {
   display: block;
 }
 
