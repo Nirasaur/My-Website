@@ -118,3 +118,16 @@ window.onload = function() {
     gameVideo.volume = 0.2;
   }
 };
+
+var dropdown = document.querySelector(".dropdown-menu");
+if (dropdown) {
+  dropdown.addEventListener("click", function(e) {
+    e.stopPropagation();
+    this.classList.toggle("active");
+  });
+  document.addEventListener("click", function() {
+    if (dropdown.classList.contains("active")) {
+      dropdown.classList.remove("active");
+    }
+  });
+}
