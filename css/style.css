@@ -11,14 +11,14 @@ p {
 }
 a {
   text-decoration: none;
-  color: #2d6a4f;
+  color: #ffffff;
   cursor: pointer;
 }
 a:hover {
   color: #c9a84c;
 }
 a:visited {
-  color: #1a472a;
+  color: #ffffff;
 }
 .navlink {
   display: inline-block;
