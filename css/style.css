@@ -1,13 +1,13 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Georgia, serif;
   background-color: #fdf3d0;
   color: #111111;
   margin: 0;
   padding: 0;
 }
-
 p {
   text-align: justify;
+  line-height: 1.5;
 }
 
 a {
