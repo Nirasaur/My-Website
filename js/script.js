@@ -90,14 +90,18 @@ window.onload = function() {
       audio.currentTime = parseFloat(savedTime);
     }
  var isMuted = localStorage.getItem("audioMuted");
-    audio.muted = (isMuted === "true");
-    audio.volume = 0.4;
-    var btn = document.getElementById("audioBtn");
-    if (audio.muted) {
-      btn.src = "images/mute.png";
-    } else {
-      btn.src = "images/unmute.png";
-    }
+if (isMuted === null) {
+  audio.muted = false;
+} else {
+  audio.muted = (isMuted === "true");
+}
+audio.volume = 0.4;
+var btn = document.getElementById("audioBtn");
+if (audio.muted) {
+  btn.src = "images/mute.png";
+} else {
+  btn.src = "images/unmute.png";
+}
     
    audio.play().catch(function() {
   document.addEventListener("click", function startAudio() {
