@@ -98,16 +98,14 @@ window.onload = function() {
     } else {
       btn.src = "images/unmute.png";
     }
-    var hasInteracted = sessionStorage.getItem("interacted");
-    if (hasInteracted) {
-      audio.play();
-    } else {
-      document.addEventListener("click", function startAudio() {
-        audio.play();
-        sessionStorage.setItem("interacted", "true");
-        document.removeEventListener("click", startAudio);
-      });
-    }
+    
+   audio.play().catch(function() {
+  document.addEventListener("click", function startAudio() {
+    audio.play();
+    document.removeEventListener("click", startAudio);
+  });
+});
+    
     setInterval(function() {
       if (!audio.paused) {
         localStorage.setItem("audioTime", audio.currentTime);
